@@ -79,6 +79,9 @@ if __name__ == "__main__":
         signature = infer_signature(X_train, predictions)
         mlflow.sklearn.log_model(best, "model", signature=signature)
 
+        run_id = run.info.run_id
+        experiment_id = run.info.experiment_id
+
     dfruns = mlflow.search_runs()
-    path2model = dfruns.sort_values("metrics.f1_score", ascending=False).iloc[0]['artifact_uri'].replace("file://","") + "/model" #путь до эксперимента с лучшей моделью
+    path2model = f"./mlruns/{experiment_id}/{run_id}/artifacts/model"
     print(path2model)
