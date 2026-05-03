@@ -85,3 +85,5 @@ if __name__ == "__main__":
     dfruns = mlflow.search_runs()
     path2model = f"./mlruns/{experiment_id}/{run_id}/artifacts/model"
     print(path2model)
+    print(f"Tracking URI: {mlflow.get_tracking_uri()}")
+    print(f"Artifact Location: {mlflow.get_artifact_uri()}")
