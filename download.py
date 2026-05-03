@@ -2,7 +2,7 @@ import pandas as pd
 from sklearn.preprocessing import OrdinalEncoder
 
 def download_data():
-    df = pd.read_csv('/home/voxdei/Downloads/iris.csv', delimiter = ',')
+    df = pd.read_csv('iris.csv', delimiter = ',')
     return df
 
 def clear_data(frame):
