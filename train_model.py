@@ -43,7 +43,7 @@ if __name__ == "__main__":
         'criterion': ['gini', 'entropy']  # or 'log_loss' for some versions
     }
     mlflow.set_experiment("tree_model_irises")
-    with mlflow.start_run():
+    with mlflow.start_run() as run:
         # Change to Classifier
         clf_tree = tree.DecisionTreeClassifier(random_state=42)
 
