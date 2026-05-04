@@ -28,7 +28,7 @@ def eval_metrics(actual, pred):
 
 
 if __name__ == "__main__":
-    df = pd.read_csv("./df_clear.csv", delimeter=',')
+    df = pd.read_csv("./df_clear.csv", delimiter=',')
     X,Y = scale_frame(df)
     # разбиваем на тестовую и валидационную выборки
     X_train, X_val, y_train, y_val = train_test_split(X, Y,
