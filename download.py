@@ -26,7 +26,7 @@ def clear_data(frame):
     Ordinal_encoded = ordinal.transform(df[cat_columns])
     df_ordinal = pd.DataFrame(Ordinal_encoded, columns=cat_columns)
     df[cat_columns] = df_ordinal[cat_columns]
-    df.to_csv("df_clear.csv")
+    df.to_csv("df_clear.csv", index=False)
     return True
 
 clear_data(download_data())
